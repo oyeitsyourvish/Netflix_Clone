@@ -31,6 +31,35 @@ namespace NetflixClone.Data
                 .HasOne(mc => mc.Category)
                 .WithMany(c => c.MovieCategories)
                 .HasForeignKey(mc => mc.CategoryId);
+
+            // Seed Categories
+            modelBuilder.Entity<Category>().HasData(
+                new Category
+                {
+                    Id = 1,
+                    Name = "Action"
+                },
+                new Category
+                {
+                    Id = 2,
+                    Name = "Comedy"
+                },
+                new Category
+                {
+                    Id = 3,
+                    Name = "Drama"
+                },
+                new Category
+                {
+                    Id = 4,
+                    Name = "Sci-Fi"
+                },
+                new Category
+                {
+                    Id = 5,
+                    Name = "Thriller"
+                }
+            );
         }
     }
 }
