@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NetflixClone.Data;
 using NetflixClone.Models;
+using NetflixClone.ViewModels;
 using System.Reflection.Metadata.Ecma335;
 
 namespace NetflixClone.Controllers
@@ -25,22 +27,52 @@ namespace NetflixClone.Controllers
         //--------------------------------------------------------------------------------------------------------------------
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var viewModel = new MovieCreateViewModel
+            {
+                Categories = await GetCategorySelectList()
+            };
+            return View(viewModel);
         }
+
+
         [HttpPost]
         [ValidateAntiForgeryTokenAttribute]
-        public async Task<IActionResult> Create(Movie movie)
+        public async Task<IActionResult> Create(MovieCreateViewModel model)
         {
             if (ModelState.IsValid)
             {
-                movie.CreatedAt = DateTime.UtcNow;
+                var movie = new Movie
+                {
+                    Title = model.Title,
+                    Description = model.Description,
+                    ThumbnailUrl = model.ThumbnailUrl,
+                    BannerUrl = model.BannerUrl,
+                    VideoUrl = model.VideoUrl,
+                    ReleaseYear = model.ReleaseYear,
+                    Duration = model.Duration,
+                    Rating = model.Rating,
+                    IsFeatured = model.IsFeatured,
+                    CreatedAt = DateTime.UtcNow
+                };
                 _context.Movies.Add(movie);
+                await _context.SaveChangesAsync();
+
+                foreach (var categoryId in model.SelectedCategoryIds)
+                {
+                    var movieCategory = new MovieCategory
+                    {
+                        MovieId = movie.Id,
+                        CategoryId = categoryId
+                    };
+                    _context.MovieCategories.Add(movieCategory);
+                }
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(movie);
+            model.Categories = await GetCategorySelectList();
+            return View(model);
         }
         //--------------------------------------------------------------------------------------------------------------------
 
@@ -126,5 +158,17 @@ namespace NetflixClone.Controllers
             return RedirectToAction(nameof(Index));
 
         }
+        //--------------------------------------------------------------------------------------------------------------------
+
+        //This gets categories from SQL Server and converts them into items that our Razor form can display
+        private async Task<List<SelectListItem>> GetCategorySelectList()
+        {
+            return await _context.Categories.OrderBy(c => c.Name).Select(c => new SelectListItem
+            {
+                Value = c.Id.ToString(),
+                Text = c.Name
+            }).ToListAsync();
+        }
+
     }
 }
