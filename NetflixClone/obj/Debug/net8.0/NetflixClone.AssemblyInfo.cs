@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NetflixClone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b5a81d7e86db0f5b6aa3b3bc436e3f806d8e344")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c2d1f6a8a4d197805f458fdf709d9151ce396cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("NetflixClone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NetflixClone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

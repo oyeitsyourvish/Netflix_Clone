@@ -16,19 +16,31 @@
             <th>Duration</th>
             <th>Rating</th>
             <th>Featured</th>
+            <th>Categories</th>
             <th>Actions</th>
+
         </tr>
     </thead>
 
     <tbody>
         @foreach (var movie in Model)
         {
+            
             <tr>
                 <td>@movie.Title</td>
                 <td>@movie.ReleaseYear</td>
                 <td>@movie.Duration minutes</td>
                 <td>@movie.Rating</td>
                 <td>@movie.IsFeatured</td>
+
+                <td>
+                    @foreach (var movieCategory in movie.MovieCategories)
+                    {
+                        <span class="badge bg-secondary">
+                            @movieCategory.Category.Name
+                        </span>
+                    }
+                </td>
 
                 <td>
                     <a asp-action="Details"

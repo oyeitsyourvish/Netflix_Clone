@@ -21,7 +21,10 @@ namespace NetflixClone.Controllers
         //Get the list of movies from the database and pass it to the view
         public async Task<IActionResult> Index()
         {
-            var movies = await _context.Movies.ToListAsync();
+            // Include the related MovieCategories and Categories when fetching movies aslo called eager loading.
+            // This will allow us to access the categories of each movie in the view without additional database queries.
+            var movies = await _context.Movies.Include(m => m.MovieCategories).ThenInclude(m => m.Category).ToListAsync();
+
             return View(movies);
         }
         //--------------------------------------------------------------------------------------------------------------------
