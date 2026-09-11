@@ -26,6 +26,8 @@ namespace NetflixClone.Controllers
         }
         //--------------------------------------------------------------------------------------------------------------------
 
+        // CREATE a new movie and save it to the database
+
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -56,6 +58,7 @@ namespace NetflixClone.Controllers
                     IsFeatured = model.IsFeatured,
                     CreatedAt = DateTime.UtcNow
                 };
+
                 _context.Movies.Add(movie);
                 await _context.SaveChangesAsync();
 
@@ -66,15 +69,20 @@ namespace NetflixClone.Controllers
                         MovieId = movie.Id,
                         CategoryId = categoryId
                     };
+
                     _context.MovieCategories.Add(movieCategory);
                 }
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             model.Categories = await GetCategorySelectList();
             return View(model);
         }
         //--------------------------------------------------------------------------------------------------------------------
+
+        //DETAILS of a movie
 
         public async Task<IActionResult> Details(int? id)
         {
@@ -91,6 +99,7 @@ namespace NetflixClone.Controllers
         }
         //--------------------------------------------------------------------------------------------------------------------
 
+        // EDIT a movie and save changes to the database
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -99,34 +108,87 @@ namespace NetflixClone.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movies.FindAsync(id);
+            var movie = await _context.Movies.Include(m => m.MovieCategories).FirstOrDefaultAsync(m => m.Id == id);
 
             if (movie == null)
             {
                 return NotFound();
             }
 
-            return View(movie);
+            var viewModel = new MovieEditViewModel
+            {
+                Id = movie.Id,
+                Title = movie.Title,
+                Description = movie.Description,
+                ThumbnailUrl = movie.ThumbnailUrl,
+                BannerUrl = movie.BannerUrl,
+                VideoUrl = movie.VideoUrl,
+                ReleaseYear = movie.ReleaseYear,
+                Duration = movie.Duration,
+                Rating = movie.Rating,
+                IsFeatured = movie.IsFeatured,
+
+                SelectedCategoryIds = movie.MovieCategories
+            .Select(mc => mc.CategoryId)
+            .ToList(),
+
+                Categories = await GetCategorySelectList()
+
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Movie movie)
+        public async Task<IActionResult> Edit(int id, MovieEditViewModel model)
         {
-            if (id != movie.Id)
+            if (id != model.Id)
             {
                 return NotFound();
             }
             if (ModelState.IsValid)
             {
-                _context.Movies.Update(movie);
+                var movie = await _context.Movies.Include(m => m.MovieCategories).FirstOrDefaultAsync(m => m.Id == id);
+
+                if (movie == null)
+                {
+                    return NotFound();
+                }
+
+                movie.Title = model.Title;
+                movie.Description = model.Description;
+                movie.ThumbnailUrl = model.ThumbnailUrl;
+                movie.BannerUrl = model.BannerUrl;
+                movie.VideoUrl = model.VideoUrl;
+                movie.ReleaseYear = model.ReleaseYear;
+                movie.Duration = model.Duration;
+                movie.Rating = model.Rating;
+                movie.IsFeatured = model.IsFeatured;
+
+                movie.MovieCategories.Clear();
+
+                foreach (var categoryId in model.SelectedCategoryIds)
+                {
+                    movie.MovieCategories.Add(new MovieCategory
+                    {
+                        MovieId = movie.Id,
+                        CategoryId = categoryId
+                    });
+                }
+
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
-            return View(movie);
+
+            model.Categories = await GetCategorySelectList();
+
+            return View(model);
         }
         //--------------------------------------------------------------------------------------------------------------------
 
+        // DELETE a movie from the database
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
