@@ -1,6 +1,9 @@
-﻿namespace NetflixClone.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace NetflixClone.Models
 {
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser
     {
+        public string FullName { get; set; } = string.Empty;
     }
 }

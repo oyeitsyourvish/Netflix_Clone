@@ -139,3 +139,4 @@ E:\Vishal CSharp\NetflixClone\NetflixClone\obj\Debug\net8.0\refint\NetflixClone.
 E:\Vishal CSharp\NetflixClone\NetflixClone\obj\Debug\net8.0\NetflixClone.pdb
 E:\Vishal CSharp\NetflixClone\NetflixClone\obj\Debug\net8.0\NetflixClone.genruntimeconfig.cache
 E:\Vishal CSharp\NetflixClone\NetflixClone\obj\Debug\net8.0\ref\NetflixClone.dll
+E:\Vishal CSharp\NetflixClone\NetflixClone\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

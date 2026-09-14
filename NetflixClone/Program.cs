@@ -1,11 +1,20 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NetflixClone.Data;
+using NetflixClone.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //Registers our DbContext with Dependency Injection.  //UseSQLServer as the database provider. //Get the connection string from appsettings.json.
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+//Registers Identity services with Dependency Injection.  //Use ApplicationUser as the user class and IdentityRole as the role class.
+//Use Entity Framework to store user and role information in the database.
+//Add default token providers for password reset, email confirmation, etc.
+builder.Services
+    .AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 
 // Add services to the container.
