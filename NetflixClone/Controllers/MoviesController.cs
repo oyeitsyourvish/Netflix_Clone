@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NetflixClone.Data;
@@ -30,7 +31,7 @@ namespace NetflixClone.Controllers
         //--------------------------------------------------------------------------------------------------------------------
 
         // CREATE a new movie and save it to the database
-
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -41,7 +42,7 @@ namespace NetflixClone.Controllers
             return View(viewModel);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryTokenAttribute]
         public async Task<IActionResult> Create(MovieCreateViewModel model)
@@ -103,6 +104,7 @@ namespace NetflixClone.Controllers
         //--------------------------------------------------------------------------------------------------------------------
 
         // EDIT a movie and save changes to the database
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -142,6 +144,7 @@ namespace NetflixClone.Controllers
             return View(viewModel);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, MovieEditViewModel model)
@@ -192,6 +195,7 @@ namespace NetflixClone.Controllers
         //--------------------------------------------------------------------------------------------------------------------
 
         // DELETE a movie from the database
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -207,6 +211,7 @@ namespace NetflixClone.Controllers
             return View(movie);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
