@@ -1,32 +1,57 @@
 using Microsoft.AspNetCore.Mvc;
-using NetflixClone.Models;
-using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
+using NetflixClone.Data;
+using NetflixClone.ViewModels;
 
 namespace NetflixClone.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
-        }
+            var movies = await _context.Movies
+                .Include(m => m.MovieCategories)
+                .ThenInclude(mc => mc.Category)
+                .ToListAsync();
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+            var viewModel = new HomeViewModel
+            {
+                FeaturedMovie = movies
+                    .FirstOrDefault(m => m.IsFeatured),
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+                TrendingMovies = movies
+                    .OrderByDescending(m => m.CreatedAt)
+                    .Take(10)
+                    .ToList()
+            };
+
+            foreach (var category in movies
+                .SelectMany(m => m.MovieCategories)
+                .Select(mc => mc.Category)
+                .DistinctBy(c => c.Id)
+                .OrderBy(c => c.Name))
+            {
+                var categoryMovies = movies
+                    .Where(m => m.MovieCategories
+                        .Any(mc => mc.CategoryId == category.Id))
+                    .ToList();
+
+                viewModel.Categories.Add(
+                    new CategoryMovieViewModel
+                    {
+                        CategoryName = category.Name,
+                        Movies = categoryMovies
+                    });
+            }
+
+            return View(viewModel);
         }
     }
 }

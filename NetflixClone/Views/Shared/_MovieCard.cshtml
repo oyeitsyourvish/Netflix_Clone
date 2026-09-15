@@ -1,0 +1,26 @@
+﻿@model NetflixClone.Models.Movie
+
+<div class="movie-card">
+
+    <a asp-controller="Movies"
+       asp-action="Details"
+       asp-route-id="@Model.Id">
+
+        <img src="@Model.ThumbnailUrl"
+             alt="@Model.Title" />
+
+    </a>
+
+    <div class="movie-info">
+
+        <h5>@Model.Title</h5>
+
+        <p>
+            @Model.ReleaseYear
+            •
+            ⭐ @Model.Rating
+        </p>
+
+    </div>
+
+</div>
