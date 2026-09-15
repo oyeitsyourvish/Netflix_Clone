@@ -21,6 +21,7 @@ body {
   margin-bottom: 60px;
 }
 
+/*------------------------------------------------------------------------------------------------------------------------------*/
 /*
          NETFLIX CLONE THEME
    ================================ */
@@ -161,3 +162,35 @@ footer {
     color: #777;
     border-top: 1px solid #222 !important;
 }
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/* ================================
+   HERO SECTION
+   ================================ */
+
+.hero {
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hero-content {
+    max-width: 550px;
+    padding-left: 60px;
+}
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #ddd;
+    }
