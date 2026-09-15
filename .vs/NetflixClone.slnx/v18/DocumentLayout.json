@@ -3,68 +3,20 @@
   "WorkspaceRootPath": "E:\\Vishal CSharp\\NetflixClone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\data\\identityseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\data\\identityseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\migrations\\20260914024051_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\migrations\\20260914024051_addidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\views\\movies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\views\\movies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\views\\movies\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\views\\movies\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\viewmodels\\movieeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\viewmodels\\movieeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|e:\\vishal csharp\\netflixclone\\netflixclone\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8A2A34C-8CC5-9A11-D03E-58AEDED27C4A}|NetflixClone\\NetflixClone.csproj|solutionrelative:netflixclone\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MoviesController.cs",
               "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Controllers\\MoviesController.cs",
               "RelativeDocumentMoniker": "NetflixClone\\Controllers\\MoviesController.cs",
@@ -92,186 +44,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IdentitySeeder.cs",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Data\\IdentitySeeder.cs",
-              "RelativeDocumentMoniker": "NetflixClone\\Data\\IdentitySeeder.cs",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Data\\IdentitySeeder.cs",
-              "RelativeToolTip": "NetflixClone\\Data\\IdentitySeeder.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwEYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T03:44:49.499Z",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "NetflixClone\\wwwroot\\css\\site.css",
+              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "NetflixClone\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAKIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-15T03:06:33.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "NetflixClone\\Views\\Account\\Login.cshtml",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "NetflixClone\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-14T03:04:45.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "NetflixClone\\Views\\Account\\Register.cshtml",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "NetflixClone\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-14T03:03:31.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AccountController.cs",
               "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "NetflixClone\\Controllers\\AccountController.cs",
               "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Controllers\\AccountController.cs",
               "RelativeToolTip": "NetflixClone\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAIwEcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAD4v38AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-14T02:59:49.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "NetflixClone\\ViewModels\\LoginViewModel.cs",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "NetflixClone\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:49:28.237Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Program.cs",
-              "RelativeDocumentMoniker": "NetflixClone\\Program.cs",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Program.cs",
-              "RelativeToolTip": "NetflixClone\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:37:56.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "NetflixClone\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "NetflixClone\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAwwH0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAswHYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-14T03:22:08.279Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "NetflixClone\\ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "NetflixClone\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:48:42.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20260914024051_AddIdentity.cs",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Migrations\\20260914024051_AddIdentity.cs",
-              "RelativeDocumentMoniker": "NetflixClone\\Migrations\\20260914024051_AddIdentity.cs",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Migrations\\20260914024051_AddIdentity.cs",
-              "RelativeToolTip": "NetflixClone\\Migrations\\20260914024051_AddIdentity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:40:51.481Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "NetflixClone\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "NetflixClone\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:33:59.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "NetflixClone\\Models\\ApplicationUser.cs",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "NetflixClone\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:25:49.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Movies\\Index.cshtml",
-              "RelativeDocumentMoniker": "NetflixClone\\Views\\Movies\\Index.cshtml",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Movies\\Index.cshtml",
-              "RelativeToolTip": "NetflixClone\\Views\\Movies\\Index.cshtml",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwCoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-11T04:16:00.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Movie.cs",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Models\\Movie.cs",
-              "RelativeDocumentMoniker": "NetflixClone\\Models\\Movie.cs",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Models\\Movie.cs",
-              "RelativeToolTip": "NetflixClone\\Models\\Movie.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA1wBAAAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T02:29:49.952Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Movies\\Edit.cshtml",
-              "RelativeDocumentMoniker": "NetflixClone\\Views\\Movies\\Edit.cshtml",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Views\\Movies\\Edit.cshtml",
-              "RelativeToolTip": "NetflixClone\\Views\\Movies\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-11T03:50:24.648Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MovieEditViewModel.cs",
-              "DocumentMoniker": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\ViewModels\\MovieEditViewModel.cs",
-              "RelativeDocumentMoniker": "NetflixClone\\ViewModels\\MovieEditViewModel.cs",
-              "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\ViewModels\\MovieEditViewModel.cs",
-              "RelativeToolTip": "NetflixClone\\ViewModels\\MovieEditViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T02:48:56.874Z"
+              "WhenOpened": "2026-09-14T03:22:08.279Z",
+              "EditorCaption": ""
             }
           ]
         }

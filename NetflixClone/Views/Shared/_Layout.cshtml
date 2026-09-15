@@ -10,19 +10,16 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-
+        <nav class="navbar navbar-expand-sm navbar-dark border-bottom">
             <div class="container-fluid">
 
-                <!-- Brand -->
                 <a class="navbar-brand"
                    asp-area=""
                    asp-controller="Home"
                    asp-action="Index">
-                    NetflixClone
+                    NETFLIXCLONE
                 </a>
 
-                <!-- Mobile menu button -->
                 <button class="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
@@ -35,36 +32,33 @@
 
                 </button>
 
-
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 
-                    <!-- Left side navigation -->
+                    <!-- LEFT MENU -->
+
                     <ul class="navbar-nav flex-grow-1">
 
                         <li class="nav-item">
-
-                            <a class="nav-link text-dark"
+                            <a class="nav-link"
                                asp-controller="Home"
                                asp-action="Index">
                                 Home
                             </a>
-
                         </li>
 
                         <li class="nav-item">
-
-                            <a class="nav-link text-dark"
+                            <a class="nav-link"
                                asp-controller="Movies"
                                asp-action="Index">
                                 Movies
                             </a>
-
                         </li>
 
                     </ul>
 
 
-                    <!-- Right side authentication -->
+                    <!-- RIGHT MENU -->
+
                     <ul class="navbar-nav">
 
                         @if (User.Identity != null &&
@@ -85,7 +79,7 @@
                                       method="post">
 
                                     <button type="submit"
-                                            class="nav-link btn btn-link text-dark">
+                                            class="nav-link btn btn-link">
                                         Logout
                                     </button>
 
@@ -97,7 +91,7 @@
                         {
                             <li class="nav-item">
 
-                                <a class="nav-link text-dark"
+                                <a class="nav-link"
                                    asp-controller="Account"
                                    asp-action="Login">
                                     Login
@@ -107,7 +101,7 @@
 
                             <li class="nav-item">
 
-                                <a class="nav-link text-dark"
+                                <a class="nav-link"
                                    asp-controller="Account"
                                    asp-action="Register">
                                     Register
@@ -121,7 +115,6 @@
                 </div>
 
             </div>
-
         </nav>
     </header>
     <div class="container">
