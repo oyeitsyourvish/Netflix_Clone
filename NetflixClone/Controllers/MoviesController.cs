@@ -94,11 +94,17 @@ namespace NetflixClone.Controllers
             {
                 return NotFound();
             }
-            var movie = await _context.Movies.FirstOrDefaultAsync(x => x.Id == id);
+
+            var movie = await _context.Movies
+                .Include(m => m.MovieCategories)
+                .ThenInclude(mc => mc.Category)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (movie == null)
             {
                 return NotFound();
             }
+
             return View(movie);
         }
         //--------------------------------------------------------------------------------------------------------------------
@@ -230,6 +236,14 @@ namespace NetflixClone.Controllers
         }
         //--------------------------------------------------------------------------------------------------------------------
 
+       
+
+
+
+
+
+
+        //---------------------------------------------------------------------------------------------------------------------
         //This gets categories from SQL Server and converts them into items that our Razor form can display
         private async Task<List<SelectListItem>> GetCategorySelectList()
         {
