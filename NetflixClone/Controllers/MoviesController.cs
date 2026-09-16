@@ -31,7 +31,7 @@ namespace NetflixClone.Controllers
         //--------------------------------------------------------------------------------------------------------------------
 
         // CREATE a new movie and save it to the database
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -42,7 +42,7 @@ namespace NetflixClone.Controllers
             return View(viewModel);
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryTokenAttribute]
         public async Task<IActionResult> Create(MovieCreateViewModel model)
@@ -201,7 +201,7 @@ namespace NetflixClone.Controllers
         //--------------------------------------------------------------------------------------------------------------------
 
         // DELETE a movie from the database
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -217,7 +217,7 @@ namespace NetflixClone.Controllers
             return View(movie);
         }
 
-        [Authorize(Roles = "Admin")]
+       // [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -236,10 +236,23 @@ namespace NetflixClone.Controllers
         }
         //--------------------------------------------------------------------------------------------------------------------
 
-       
+        public async Task<IActionResult> Watch(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var movie = await _context.Movies
+                .FirstOrDefaultAsync(m => m.Id == id);
 
+            if (movie == null)
+            {
+                return NotFound();
+            }
 
+            return View(movie);
+        }
 
 
 
