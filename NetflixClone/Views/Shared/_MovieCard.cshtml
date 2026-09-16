@@ -4,10 +4,20 @@
 
     <a asp-controller="Movies"
        asp-action="Details"
-       asp-route-id="@Model.Id">
+       asp-route-id="@Model.Id"
+       class="movie-link">
 
         <img src="@Model.ThumbnailUrl"
-             alt="@Model.Title" />
+             alt="@Model.Title"
+             class="movie-image" />
+
+        <div class="movie-overlay">
+
+            <div class="play-button">
+                ▶
+            </div>
+
+        </div>
 
     </a>
 
@@ -17,7 +27,7 @@
 
         <p>
             @Model.ReleaseYear
-            •
+            <span>•</span>
             ⭐ @Model.Rating
         </p>
 
