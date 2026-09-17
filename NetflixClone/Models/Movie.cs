@@ -15,6 +15,7 @@
         public bool IsFeatured { get; set; }
         public DateTime CreatedAt { get; set; }
         public ICollection<MovieCategory> MovieCategories { get; set; } = new List<MovieCategory>();
+        public ICollection<UserMovie> UserMovies { get; set; } = new List<UserMovie>();
 
     }
 }
