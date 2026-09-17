@@ -3,7 +3,6 @@
 <div class="movie-details">
 
     <!-- Hero Banner -->
-
     <div class="movie-details-hero"
          style="background-image:
         linear-gradient(
@@ -16,12 +15,12 @@
 
         <div class="movie-details-content">
 
+            <!-- Movie Title -->
             <h1>
                 @Model.Title
             </h1>
 
             <!-- Movie Metadata -->
-
             <div class="movie-meta">
 
                 <span>
@@ -42,9 +41,7 @@
 
             </div>
 
-
             <!-- Categories -->
-
             <div class="movie-categories">
 
                 @foreach (var movieCategory in Model.MovieCategories)
@@ -56,18 +53,15 @@
 
             </div>
 
-
             <!-- Description -->
-
             <p class="movie-description">
                 @Model.Description
             </p>
 
-
             <!-- Buttons -->
-
             <div class="movie-actions">
 
+                <!-- Watch Now -->
                 <a asp-controller="Movies"
                    asp-action="Watch"
                    asp-route-id="@Model.Id"
@@ -77,23 +71,67 @@
 
                 </a>
 
-                <form asp-controller="MyList"
-                      asp-action="Add"
-                      method="post"
-                      style="display:inline;">
 
-               <input type="hidden"
-                      name="movieId"
-                      value="@Model.Id" />
+                <!-- My List -->
+                @if (User.Identity != null &&
+                     User.Identity.IsAuthenticated)
+                {
+                    @if (ViewBag.IsInMyList == true)
+                    {
+                        <!-- Remove from My List -->
 
-              <button type="submit"
-                     class="btn btn-netflix-secondary">
+                        <form asp-controller="MyList"
+                              asp-action="Remove"
+                              method="post">
 
-                     + My List
+                            <input type="hidden"
+                                   name="movieId"
+                                   value="@Model.Id" />
 
-              </button>
+                            <button type="submit"
+                                    class="btn btn-netflix-secondary">
 
-</form>
+                                ✓ In My List
+
+                            </button>
+
+                        </form>
+                    }
+                    else
+                    {
+                        <!-- Add to My List -->
+
+                        <form asp-controller="MyList"
+                              asp-action="Add"
+                              method="post">
+
+                            <input type="hidden"
+                                   name="movieId"
+                                   value="@Model.Id" />
+
+                            <button type="submit"
+                                    class="btn btn-netflix-secondary">
+
+                                + My List
+
+                            </button>
+
+                        </form>
+                    }
+                }
+                else
+                {
+                    <!-- Login Required -->
+
+                    <a asp-controller="Account"
+                       asp-action="Login"
+                       asp-route-returnUrl="@Context.Request.Path"
+                       class="btn btn-netflix-secondary">
+
+                        + My List
+
+                    </a>
+                }
 
             </div>
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,11 +13,13 @@ namespace NetflixClone.Controllers
     public class MoviesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
         // Added Constructor dependency injection for ApplicationDbContext
-        public MoviesController(ApplicationDbContext context)
+        public MoviesController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         //Get the list of movies from the database and pass it to the view
@@ -31,7 +34,7 @@ namespace NetflixClone.Controllers
         //--------------------------------------------------------------------------------------------------------------------
 
         // CREATE a new movie and save it to the database
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -42,7 +45,7 @@ namespace NetflixClone.Controllers
             return View(viewModel);
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryTokenAttribute]
         public async Task<IActionResult> Create(MovieCreateViewModel model)
@@ -104,6 +107,22 @@ namespace NetflixClone.Controllers
             {
                 return NotFound();
             }
+
+            // this is for if Movie is already added in myList it show ✓Mylist if not it shows +MyList
+            var isInMyList = false;
+
+            if (User.Identity != null &&
+                User.Identity.IsAuthenticated)
+            {
+                var userId = _userManager.GetUserId(User);
+
+                isInMyList = await _context.UserMovies
+                    .AnyAsync(um =>
+                        um.UserId == userId &&
+                        um.MovieId == movie.Id);
+            }
+
+            ViewBag.IsInMyList = isInMyList;
 
             return View(movie);
         }
@@ -201,7 +220,7 @@ namespace NetflixClone.Controllers
         //--------------------------------------------------------------------------------------------------------------------
 
         // DELETE a movie from the database
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -217,7 +236,7 @@ namespace NetflixClone.Controllers
             return View(movie);
         }
 
-       // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

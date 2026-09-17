@@ -450,6 +450,7 @@ footer {
 }
 
 
+
 @media (max-width: 480px) {
 
     .movie-details-hero {
@@ -465,9 +466,14 @@ footer {
     }
 
     .movie-actions {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        align-items: center;
+        gap: 12px;
     }
+
+        .movie-actions form {
+            margin: 0;
+        }
 }
 
 
