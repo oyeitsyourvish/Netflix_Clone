@@ -1,0 +1,89 @@
+﻿@model IEnumerable<NetflixClone.Models.Movie>
+
+<div class="container-fluid px-4">
+
+    <div class="my-list-header">
+        <h1>My List</h1>
+
+        <p>
+            Movies you've saved to watch later.
+        </p>
+    </div>
+
+
+    @if (!Model.Any())
+    {
+        <div class="empty-my-list">
+
+            <h3>Your list is empty</h3>
+
+            <p>
+                Add movies to your list and they will
+                appear here.
+            </p>
+
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="btn btn-netflix">
+
+                Browse Movies
+
+            </a>
+
+        </div>
+    }
+    else
+    {
+        <div class="my-list-grid">
+
+            @foreach (var movie in Model)
+            {
+                <div class="my-list-card">
+
+                    <a asp-controller="Movies"
+                       asp-action="Details"
+                       asp-route-id="@movie.Id">
+
+                        <img src="@movie.ThumbnailUrl"
+                             alt="@movie.Title" />
+
+                    </a>
+
+                    <div class="my-list-card-info">
+
+                        <h5>
+                            @movie.Title
+                        </h5>
+
+                        <p>
+                            @movie.ReleaseYear
+                            •
+                            ⭐ @movie.Rating
+                        </p>
+
+                        <form asp-controller="MyList"
+                              asp-action="Remove"
+                              method="post">
+
+                            <input type="hidden"
+                                   name="movieId"
+                                   value="@movie.Id" />
+
+                            <button type="submit"
+                                    class="btn btn-sm btn-netflix-secondary">
+
+                                Remove
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    }
+
+</div>

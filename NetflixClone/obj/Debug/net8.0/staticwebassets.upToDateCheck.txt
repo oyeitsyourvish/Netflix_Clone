@@ -58,5 +58,5 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\videos\code.mp4
 wwwroot\videos\mirzapur.mp4
+wwwroot\videos\code.mp4
