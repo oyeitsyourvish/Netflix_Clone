@@ -83,7 +83,8 @@
               "ViewState": "AgIAAB0AAAAAAAAAAAAwwDMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-10T02:28:56.66Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -142,7 +143,7 @@
               "RelativeDocumentMoniker": "NetflixClone\\Controllers\\MyListController.cs",
               "ToolTip": "E:\\Vishal CSharp\\NetflixClone\\NetflixClone\\Controllers\\MyListController.cs",
               "RelativeToolTip": "NetflixClone\\Controllers\\MyListController.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAADgv1cAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAD4vygAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-17T11:45:54.271Z",
               "EditorCaption": ""
@@ -181,7 +182,8 @@
               "RelativeToolTip": "NetflixClone\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAADgv1YAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:59:49.887Z"
+              "WhenOpened": "2026-09-14T02:59:49.887Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
