@@ -1,0 +1,51 @@
+﻿@model IEnumerable<NetflixClone.Models.Movie>
+
+<div class="container-fluid px-4">
+
+    <div class="search-header">
+
+        @if (!string.IsNullOrEmpty(ViewBag.SearchQuery))
+        {
+            <h1>
+                Search results for
+                "<span>@ViewBag.SearchQuery</span>"
+            </h1>
+        }
+        else
+        {
+            <h1>
+                Search Movies
+            </h1>
+        }
+
+    </div>
+
+
+    @if (!Model.Any())
+    {
+        <div class="no-results">
+
+            <h3>
+                No movies found
+            </h3>
+
+            <p>
+                Try searching with another movie name.
+            </p>
+
+        </div>
+    }
+    else
+    {
+        <div class="search-results">
+
+            @foreach (var movie in Model)
+            {
+                <partial name="_MovieCard"
+                         model="movie" />
+            }
+
+        </div>
+    }
+
+</div>

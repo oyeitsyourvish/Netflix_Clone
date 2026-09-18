@@ -64,6 +64,26 @@
 
                     </ul>
 
+                    <form asp-controller="Movies"
+                          asp-action="Search"
+                          method="get"
+                          class="d-flex me-3">
+
+                        <input type="search"
+                               name="query"
+                               class="form-control search-input"
+                               placeholder="Search movies..."
+                               autocomplete="off" />
+
+                        <button type="submit"
+                                class="btn btn-netflix search-button">
+
+                            🔍
+
+                        </button>
+
+                    </form>
+
 
                     <!-- RIGHT MENU -->
 

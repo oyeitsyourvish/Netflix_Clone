@@ -606,3 +606,85 @@ footer {
         color: #999;
         margin-bottom: 25px;
     }
+
+
+/* ================================
+   SEARCH
+   ================================ */
+
+.search-header {
+    padding-top: 35px;
+    margin-bottom: 30px;
+}
+
+    .search-header h1 {
+        color: white;
+        font-size: 1.8rem;
+    }
+
+        .search-header h1 span {
+            color: #e50914;
+        }
+
+
+/* Search results */
+
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+
+/* No results */
+
+.no-results {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+    .no-results h3 {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .no-results p {
+        color: #999;
+    }
+
+/* Search navbar */
+
+.search-input {
+    width: 220px;
+    background-color: #222;
+    border: 1px solid #555;
+    color: white;
+}
+
+    .search-input::placeholder {
+        color: #999;
+    }
+
+    .search-input:focus {
+        background-color: #222;
+        color: white;
+        border-color: #777;
+        box-shadow: none;
+    }
+
+.search-button {
+    margin-left: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-button {
+        margin-left: 5px;
+    }
+}

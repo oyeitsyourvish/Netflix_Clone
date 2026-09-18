@@ -276,6 +276,33 @@ namespace NetflixClone.Controllers
 
 
         //---------------------------------------------------------------------------------------------------------------------
+
+        // Search Movie
+        [HttpGet]
+        public async Task<IActionResult> Search(string? query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return View(new List<Movie>());
+            }
+
+            query = query.Trim();
+
+            var movies = await _context.Movies
+                .Include(m => m.MovieCategories)
+                .ThenInclude(mc => mc.Category)
+                .Where(m =>
+                    m.Title.Contains(query) ||
+                    m.Description.Contains(query))
+                .OrderBy(m => m.Title)
+                .ToListAsync();
+
+            ViewBag.SearchQuery = query;
+
+            return View(movies);
+        }
+
+        //---------------------------------------------------------------------------------------------------------------------
         //This gets categories from SQL Server and converts them into items that our Razor form can display
         private async Task<List<SelectListItem>> GetCategorySelectList()
         {

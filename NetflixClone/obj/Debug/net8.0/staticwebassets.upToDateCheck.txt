@@ -1,4 +1,7 @@
+wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\mirzapur-banner.jpg
+wwwroot\images\mirzapur-thumbnail.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -59,4 +62,3 @@ wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
 wwwroot\videos\code.mp4
 wwwroot\videos\mirzapur.mp4
-wwwroot\css\site.css
