@@ -1,7 +1,14 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\andhadhun-banner.jpg
+wwwroot\images\andhadhun-thumbnail.jpg
+wwwroot\images\drishyam-banner.jpg
+wwwroot\images\drishyam-thumbnail.jpg
 wwwroot\images\mirzapur-banner.jpg
 wwwroot\images\mirzapur-thumbnail.jpg
+wwwroot\images\Pro-Banner.jpg
+wwwroot\images\three-idiot-banner.jpg
+wwwroot\images\three-idiot-thumbnail.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -60,5 +67,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\videos\code.mp4
 wwwroot\videos\mirzapur.mp4
