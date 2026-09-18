@@ -1,5 +1,5 @@
 ﻿<p align="center">
-    <img src="./wwwroot/images/Pro-Banner.jpg"
+    <img src="./NetflixClone/wwwroot/images/Pro-Banner.jpg"
          alt="iVishMovies Banner"
          width="100%">
 </p>
